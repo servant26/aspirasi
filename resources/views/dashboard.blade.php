@@ -26,9 +26,9 @@
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-4 col-12">
             <!-- small box -->
-            <div class="small-box bg-info">
+            <div class="small-box bg-success">
               <div class="inner">
                 <h3>150</h3>
 
@@ -41,9 +41,9 @@
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-4 col-12">
             <!-- small box -->
-            <div class="small-box bg-warning">
+            <div class="small-box bg-danger">
               <div class="inner">
                 <h3>44</h3>
 
@@ -55,12 +55,11 @@
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-4 col-12">
             <!-- small box -->
-            <div class="small-box bg-success">
+            <div class="small-box bg-info">
               <div class="inner">
                 <h3>53<sup style="font-size: 20px">%</sup></h3>
-
                 <p>Sudah ditanggapi</p>
               </div>
               <div class="icon">
@@ -70,20 +69,6 @@
             </div>
           </div>
           <!-- ./col -->
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>65</h3>
-
-                <p>Laporan ditolak</p>
-              </div>
-              <div class="icon">
-                <i class="fa fa-trash"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
           </div>
           <!-- ./col -->
         </div>
@@ -107,15 +92,37 @@
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>1.</td>
-                    <td>Ali Khatami</td>
-                    <td>Gg Bersama</td>
-                    <td>081545882988</td>
-                    <td>Keluhan</td>
-                    <td>Sudah ditanggapi</td>
-                    <td>Detail</td>
-                  </tr>
+                    @foreach($aspirations as $index => $a)
+                    <tr>
+                      <td>{{ $index + 1 }}</td> <!-- Nomor Urut -->
+                      <td>{{ $a->nama }}</td>
+                      <td>{{ $a->alamat }}</td>
+                      <td>{{ $a->nomor_telepon }}</td>
+                      <td>
+                      @if($a->jenis_aspirasi == 1)
+                        <p>Keluhan</p>
+                      @elseif($a->jenis_aspirasi == 2)
+                        <p>Kritik</p>
+                      @elseif($a->jenis_aspirasi == 3)
+                        <p>Saran</p>
+                      @else
+                        <button type="button" class="btn btn-secondary">Status Tidak Dikenal</button>
+                      @endif
+                      </td>
+                      <td>
+                      @if($a->status == 1)
+                        <span class="badge badge-warning">Belum ditanggapi</span>
+                      @elseif($a->status == 2)
+                        <span class="badge badge-info">Sudah ditanggapi</span>
+                      @elseif($a->status == 3)
+                        <span class="badge badge-danger">Aspirasi ditolak</span>
+                      @else
+                        <button type="button" class="btn btn-secondary">Status Tidak Dikenal</button>
+                      @endif
+                    </td>
+                      <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Detail</button></td>
+                    </tr> 
+                    @endforeach
                   </tbody>
                 </table>
               </div>
@@ -131,5 +138,25 @@
     </section>
     <!-- /.content -->
   </div>
+  <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">From</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
   <!-- /.content-wrapper -->
 @endsection
