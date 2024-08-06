@@ -25,7 +25,7 @@ class AspirationSeeder extends Seeder
                 'nomor_telepon' => $faker->phoneNumber,
                 'jenis_aspirasi' => $faker->randomElement([1, 2, 3]),
                 'isi_aspirasi' => $faker->paragraph,
-                'status' => $faker->randomElement([1, 2, 3]),
+                'status' => $faker->randomElement([1, 2]),
                 'tanggal' => $faker->dateTimeThisYear,
                 'created_at' => now(),
                 'updated_at' => now(),

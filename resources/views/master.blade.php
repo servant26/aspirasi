@@ -35,7 +35,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="#" class="nav-link"><?php echo getCurrentWITATime(); ?></a>
       </li>
     </ul>
 
@@ -97,7 +97,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link active">
+            <a href="/dashboard" class="nav-link active">
               <i class="nav-icon fa fa-home"></i>
               <p>
                 Dashboard
@@ -182,5 +182,45 @@
   });
 </script>
 
+<?php
+function getCurrentWITATime() {
+    // Set timezone to WITA (Asia/Makassar)
+    date_default_timezone_set('Asia/Makassar');
+    
+    // Format the date as required: "Senin, 28 September 2024 20:18"
+    $currentTime = strftime('%A, %d %B %Y %H:%M');
+
+    // Convert day and month names to Indonesian
+    $days = [
+        'Sunday' => 'Minggu',
+        'Monday' => 'Senin',
+        'Tuesday' => 'Selasa',
+        'Wednesday' => 'Rabu',
+        'Thursday' => 'Kamis',
+        'Friday' => 'Jumat',
+        'Saturday' => 'Sabtu'
+    ];
+
+    $months = [
+        'January' => 'Januari',
+        'February' => 'Februari',
+        'March' => 'Maret',
+        'April' => 'April',
+        'May' => 'Mei',
+        'June' => 'Juni',
+        'July' => 'Juli',
+        'August' => 'Agustus',
+        'September' => 'September',
+        'October' => 'Oktober',
+        'November' => 'November',
+        'December' => 'Desember'
+    ];
+
+    $currentTime = str_replace(array_keys($days), array_values($days), $currentTime);
+    $currentTime = str_replace(array_keys($months), array_values($months), $currentTime);
+
+    return $currentTime;
+}
+?>
 </body>
 </html>

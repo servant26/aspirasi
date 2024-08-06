@@ -8,12 +8,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Selamat datang Admin</h1>
+            <h1>Daftar aspirasi</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Admin</a></li>
-              <li class="breadcrumb-item active">Dashboard</li>
+              <li class="breadcrumb-item active">Sudah ditanggapi</li>
             </ol>
           </div>
         </div>
@@ -23,56 +23,6 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-      <div class="container-fluid">
-        <!-- Small boxes (Stat box) -->
-        <div class="row">
-          <div class="col-lg-4 col-12">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>{{ $aspirations->count() }}</h3>
-
-                <p>Daftar Aspirasi</p>
-              </div>
-              <div class="icon">
-                <i class="fa fa-book"></i>
-              </div>
-              <a href="/daftar_aspirasi" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-4 col-12">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>{{ $aspirations->where('status', 1)->count() }}</h3>
-                <p>Belum ditanggapi</p>
-              </div>
-              <div class="icon">
-                <i class="fa fa-user-times"></i>
-              </div>
-              <a href="/belum_ditanggapi" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-12">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3>{{ $aspirations->where('status', 2)->count() }}</h3>
-                <p>Sudah ditanggapi</p>
-              </div>
-              <div class="icon">
-                <i class="fa fa-upload"></i>
-              </div>
-              <a href="/sudah_ditanggapi" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          </div>
-          <!-- ./col -->
-        </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
         <div class="row">
           <div class="col-12">
             <div class="card">
