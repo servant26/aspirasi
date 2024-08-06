@@ -42,5 +42,13 @@ class AdminController extends Controller
         // mengirim data pegawai ke view dashboard
         return view('daftar_aspirasi', ['aspirations' => $aspirations]);
     }
+
+    public function detail($id)
+    {
+        // mengambil data aspirations berdasarkan id yang dipilih
+        $aspirations = DB::table('aspirations')->where('id',$id)->get();
+        // passing data pegawai yang didapat ke view edit.blade.php
+        return view('detail',['aspirations' => $aspirations]);
+    }
     
 }
