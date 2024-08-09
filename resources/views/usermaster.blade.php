@@ -111,6 +111,11 @@
             max-height: 100%;
             width: auto; /* Memastikan rasio aspek gambar tetap */
         }
+        
+        .navbar-nav .nav-link:hover {
+            color: #e91e63; /*Ganti dengan warna yang kamu inginkan */
+            transition: color 0.3s ease;
+        }
 
     </style>
 </head>
@@ -130,22 +135,27 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown mx-3 active"> 
-          <a class="nav-link active" href="../index.html" role="button" aria-expanded="false">
+          <a class="nav-link active" href="/" role="button" aria-expanded="false">
             Home
           </a>
         </li>
         <li class="nav-item dropdown mx-3 active"> 
-          <a class="nav-link active" href="#cover" role="button" aria-expanded="false">
+          <a class="nav-link active" href="/profile_bpd" role="button" aria-expanded="false">
+            Profile BPD
+          </a>
+        </li>
+        <li class="nav-item dropdown mx-3 active"> 
+          <a class="nav-link active" href="/buat_aspirasi" role="button" aria-expanded="false">
             Buat Aspirasi
           </a>
         </li>
         <li class="nav-item dropdown mx-3">
-          <a class="nav-link active" href="#synopsis" role="button" aria-expanded="false">
+          <a class="nav-link active" href="#lihat_aspirasi" role="button" aria-expanded="false">
             Lihat Aspirasi
           </a>
         </li>
         <li class="nav-item dropdown mx-3">
-          <a class="nav-link active" href="#char" role="button" aria-expanded="false">
+          <a class="nav-link active" href="faq" role="button" aria-expanded="false">
             FAQ
           </a>
         </li>

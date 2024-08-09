@@ -11,4 +11,14 @@ class UserController extends Controller
     {
         return view('home');
     }
+
+    public function profile_bpd()
+    {
+        return view('profile_bpd');
+    }
+
+    public function buat_aspirasi()
+    {
+        return view('buat_aspirasi');
+    }
 }

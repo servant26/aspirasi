@@ -15,3 +15,5 @@ Route::get('/dashboard/detail/{id}', [AdminController::class, 'detail']);
 Route::post('/detail/update', [AdminController::class, 'update']);
 
 Route::get('/', [UserController::class, 'home']);
+Route::get('/profile_bpd', [UserController::class, 'profile_bpd']);
+Route::get('/buat_aspirasi', [UserController::class, 'buat_aspirasi']);
