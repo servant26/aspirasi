@@ -59,17 +59,13 @@
                       @endif
                       </td>
                       <td>
-                      @if($a->status == 1)
+                      @if(is_null($a->isi_tanggapan))
                         <span class="badge badge-warning">Belum ditanggapi</span>
-                      @elseif($a->status == 2)
-                        <span class="badge badge-info">Sudah ditanggapi</span>
-                      @elseif($a->status == 3)
-                        <span class="badge badge-danger">Aspirasi ditolak</span>
                       @else
-                        <button type="button" class="btn btn-secondary">Status Tidak Dikenal</button>
+                        <span class="badge badge-info">Sudah ditanggapi</span>
                       @endif
-                    </td>
-                      <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Detail</button></td>
+                      </td>
+                    <td><a class="btn btn-success" href="/dashboard/detail/{{ $a->id }}" role="button">Detail</a></td>
                     </tr> 
                     @endforeach
                   </tbody>
@@ -87,25 +83,5 @@
     </section>
     <!-- /.content -->
   </div>
-  <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">From</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
   <!-- /.content-wrapper -->
 @endsection

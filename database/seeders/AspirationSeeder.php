@@ -4,13 +4,12 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 use Faker\Factory as Faker;
 
 class AspirationSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Jalankan database seed.
      *
      * @return void
      */
@@ -25,8 +24,7 @@ class AspirationSeeder extends Seeder
                 'nomor_telepon' => $faker->phoneNumber,
                 'jenis_aspirasi' => $faker->randomElement([1, 2, 3]),
                 'isi_aspirasi' => $faker->paragraph,
-                'status' => $faker->randomElement([1, 2]),
-                'tanggal' => $faker->dateTimeThisYear,
+                'isi_tanggapan' => null,
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);

@@ -7,6 +7,19 @@ use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
+
+    public function login()
+    {
+        // mengirim data pegawai ke view dashboard
+        return view('login');
+    }
+
+    public function ganti()
+    {
+        // mengirim data pegawai ke view dashboard
+        return view('ganti');
+    }
+
     public function index()
     {
         // mengambil data dari table pegawai
@@ -18,21 +31,23 @@ class AdminController extends Controller
 
     public function belum()
     {
-        // mengambil data dari table pegawai
-        $aspirations = DB::table('aspirations')->where('status', 1)->get();
+        // Mengambil data dari table aspirations dimana kolom isi_tanggapan masih null
+        $aspirations = DB::table('aspirations')->whereNull('isi_tanggapan')->get();
     
-        // mengirim data pegawai ke view dashboard
+        // Mengirim data aspirasi ke view belum
         return view('belum', ['aspirations' => $aspirations]);
     }
+    
 
     public function sudah()
     {
-        // mengambil data dari table pegawai
-        $aspirations = DB::table('aspirations')->where('status', 2)->get();
+        // Mengambil data dari table aspirations dimana kolom isi_tanggapan tidak null
+        $aspirations = DB::table('aspirations')->whereNotNull('isi_tanggapan')->get();
     
-        // mengirim data pegawai ke view dashboard
+        // Mengirim data aspirasi ke view sudah
         return view('sudah', ['aspirations' => $aspirations]);
     }
+    
 
     public function daftar_aspirasi()
     {
@@ -50,5 +65,22 @@ class AdminController extends Controller
         // passing data pegawai yang didapat ke view edit.blade.php
         return view('detail',['aspirations' => $aspirations]);
     }
+
+    public function update(Request $request)
+    {
+        $request->validate([
+            'id' => 'required|exists:aspirations,id',
+            'isi_tanggapan' => 'required|string',
+        ]);
+    
+        // Update data
+        DB::table('aspirations')->where('id', $request->id)->update([
+            'isi_tanggapan' => $request->isi_tanggapan,
+        ]);
+    
+        // Redirect ke halaman yang sesuai
+        return redirect('/dashboard');
+    }
+    
     
 }

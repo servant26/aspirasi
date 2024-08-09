@@ -45,7 +45,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>{{ $aspirations->where('status', 1)->count() }}</h3>
+              <h3>{{ $aspirations->filter(function($aspiration) { return is_null($aspiration->isi_tanggapan); })->count() }}</h3>
                 <p>Belum ditanggapi</p>
               </div>
               <div class="icon">
@@ -58,7 +58,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>{{ $aspirations->where('status', 2)->count() }}</h3>
+              <h3>{{ $aspirations->filter(function($aspiration) { return !is_null($aspiration->isi_tanggapan); })->count() }}</h3>
                 <p>Sudah ditanggapi</p>
               </div>
               <div class="icon">
@@ -109,16 +109,12 @@
                       @endif
                       </td>
                       <td>
-                      @if($a->status == 1)
+                      @if(is_null($a->isi_tanggapan))
                         <span class="badge badge-warning">Belum ditanggapi</span>
-                      @elseif($a->status == 2)
-                        <span class="badge badge-info">Sudah ditanggapi</span>
-                      @elseif($a->status == 3)
-                        <span class="badge badge-danger">Aspirasi ditolak</span>
                       @else
-                        <button type="button" class="btn btn-secondary">Status Tidak Dikenal</button>
+                        <span class="badge badge-info">Sudah ditanggapi</span>
                       @endif
-                    </td>
+                      </td>
                       <td><a class="btn btn-success" href="/dashboard/detail/{{ $a->id }}" role="button">Detail</a></td>
                     </tr> 
                     @endforeach
