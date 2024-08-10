@@ -35,7 +35,6 @@
                     <th>Nama</th>
                     <th>Alamat(s)</th>
                     <th>Nomor Telepon</th>
-                    <th>Jenis Aspirasi</th>
                     <th>Status</th>
                     <th>Detail</th>
                   </tr>
@@ -47,17 +46,6 @@
                       <td>{{ $a->nama }}</td>
                       <td>{{ $a->alamat }}</td>
                       <td>{{ $a->nomor_telepon }}</td>
-                      <td>
-                      @if($a->jenis_aspirasi == 1)
-                        <p>Keluhan</p>
-                      @elseif($a->jenis_aspirasi == 2)
-                        <p>Kritik</p>
-                      @elseif($a->jenis_aspirasi == 3)
-                        <p>Saran</p>
-                      @else
-                        <button type="button" class="btn btn-secondary">Status Tidak Dikenal</button>
-                      @endif
-                      </td>
                       <td>
                         <span class="badge badge-info">Sudah ditanggapi</span>
                       </td>

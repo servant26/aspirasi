@@ -41,7 +41,7 @@
                 Selamat Datang di Web Aspirasi Masyarakat Desa Lolo
             </p>
             <p class="d-none d-sm-block">Merupakan sebuah website layanan yang menerima segala aspirasi dari Masyarakat di Desa Lolo</p>
-            <a class="btn btn-warning" href="#" role="button">Ajukan Aspirasi</a>
+            <a class="btn btn-warning" href="/buat_aspirasi" role="button">Ajukan Aspirasi</a>
         </div>
     </div>
 </div>

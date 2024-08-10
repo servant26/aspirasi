@@ -18,7 +18,6 @@ class CreateAspirationsTable extends Migration
             $table->string('nama');
             $table->string('alamat');
             $table->string('nomor_telepon');
-            $table->enum('jenis_aspirasi', [1, 2, 3]);
             $table->text('isi_aspirasi');
             $table->text('isi_tanggapan')->nullable(); 
             $table->timestamps();

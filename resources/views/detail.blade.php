@@ -30,17 +30,6 @@
                             <label for="inputTelepon" class="form-label">Nomor Telepon :</label>
                             <input type="tel" value="{{ $a->nomor_telepon }}" class="form-control" id="inputTelepon" name="nomor_telepon" readonly>
                         </div>
-
-                        <!-- Jenis Aspirasi -->
-                        <div class="mb-3">
-                            <label for="inputKategori" class="form-label">Jenis Aspirasi :</label>
-                            <input type="text" 
-                                value="{{ $a->jenis_aspirasi == 1 ? 'Keluhan' : ($a->jenis_aspirasi == 2 ? 'Kritik' : ($a->jenis_aspirasi == 3 ? 'Saran' : '')) }}" 
-                                class="form-control" 
-                                id="inputKategori" 
-                                name="jenis_aspirasi" 
-                                readonly>
-                        </div>
                         
                         <!-- Isi Aspirasi -->
                         <div class="mb-3">

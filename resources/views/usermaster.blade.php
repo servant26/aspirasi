@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aspirasi Masyarakat</title>
     @yield('css')
-    <link rel="icon" href="" type="image/png">
+    <link rel="icon" href="{{ asset('images/paser.png') }}" type="image/png">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <!-- Bootstrap -->
     <link href="{{ asset('bt\css\bootstrap.min.css') }}" rel="stylesheet">
@@ -150,7 +150,7 @@
           </a>
         </li>
         <li class="nav-item dropdown mx-3">
-          <a class="nav-link active" href="#lihat_aspirasi" role="button" aria-expanded="false">
+          <a class="nav-link active" href="lihat_aspirasi" role="button" aria-expanded="false">
             Lihat Aspirasi
           </a>
         </li>
