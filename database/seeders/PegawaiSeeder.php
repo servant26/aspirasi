@@ -18,37 +18,37 @@ class PegawaiSeeder extends Seeder
             [
                 'nama' => 'Jumadi Saputra',
                 'jabatan' => 'Kepala Desa',
-                'gender' => 'L',
+                'gender' => 'Laki-laki',
             ],
             [
                 'nama' => 'Hamisah',
                 'jabatan' => 'Ketua',
-                'gender' => 'P',
+                'gender' => 'Perempuan',
             ],
             [
                 'nama' => 'Eko Winarto',
                 'jabatan' => 'Wakil Ketua',
-                'gender' => 'L',
+                'gender' => 'Laki-laki',
             ],
             [
                 'nama' => 'Herniwati',
                 'jabatan' => 'Sekretaris',
-                'gender' => 'P',
+                'gender' => 'Perempuan',
             ],
             [
                 'nama' => 'Amalia',
                 'jabatan' => 'Staff ADM',
-                'gender' => 'P',
+                'gender' => 'Perempuan',
             ],
             [
                 'nama' => 'Wandiro Bayu Broto NS.',
                 'jabatan' => 'Ketua Bidang Penyelenggaraan Pemerintahan',
-                'gender' => 'L',
+                'gender' => 'Laki-laki',
             ],
             [
                 'nama' => 'Nor',
                 'jabatan' => 'Ketua Bidang Pembangunan',
-                'gender' => 'P',
+                'gender' => 'Perempuan',
             ],
         ]);
     }

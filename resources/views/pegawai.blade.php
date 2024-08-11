@@ -8,12 +8,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Aspirasi yang sudah ditanggapi</h1>
+            <h1>Daftar Pegawai</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Admin</a></li>
-              <li class="breadcrumb-item active">Pegawai</li>
+              <li class="breadcrumb-item active">Daftar Pegawai</li>
             </ol>
           </div>
         </div>
@@ -36,7 +36,7 @@
                     <th>Foto</th>
                     <th>Jabatan</th>
                     <th>Gender</th>
-                    <th style="width: 15%;"><a class="btn btn-primary" href="" role="button">Tambah</a></th>
+                    <th style="width: 15%;"><a class="btn btn-primary" href="/pegawai/tambah" role="button">Tambah</a></th>
                   </tr>
                   </thead>
                   <tbody>
