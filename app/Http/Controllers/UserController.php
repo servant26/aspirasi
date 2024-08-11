@@ -27,24 +27,31 @@ class UserController extends Controller
         return view('buat_aspirasi');
     }
 
-    // method untuk insert data ke table pegawai
     public function store(Request $request)
     {
-        // insert data ke table pegawai
+        // Insert data ke table aspirations
         DB::table('aspirations')->insert([
-            'nama' => $request->input('nama'), // Pastikan input ini tidak null
+            'nama' => $request->input('nama'),
             'alamat' => $request->input('alamat'),
             'nomor_telepon' => $request->input('nomor_telepon'),
             'isi_aspirasi' => $request->input('isi_aspirasi'),
+            'created_at' => now(), // Set timestamp created_at
+            'updated_at' => now(), // Set timestamp updated_at jika perlu
         ]);        
-        // alihkan halaman ke halaman pegawai
+        
+        // Alihkan halaman ke halaman buat aspirasi
         return redirect('/buat_aspirasi');
-    
     }
+    
 
     public function lihat_aspirasi()
     {
-        return view('lihat_aspirasi');
+        // Mengambil data dari table aspirations dimana kolom isi_tanggapan tidak null
+        $aspirations = DB::table('aspirations')
+        ->whereNotNull('isi_tanggapan')
+        ->orderBy('updated_at', 'desc')
+        ->get();
+        return view('lihat_aspirasi', ['aspirations' => $aspirations]);
     }
 
     public function faq()

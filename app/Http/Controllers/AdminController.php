@@ -14,12 +14,6 @@ class AdminController extends Controller
         return view('login');
     }
 
-    public function ganti()
-    {
-        // mengirim data pegawai ke view dashboard
-        return view('ganti');
-    }
-
     public function index()
     {
         // mengambil data dari table pegawai
@@ -76,11 +70,13 @@ class AdminController extends Controller
         // Update data
         DB::table('aspirations')->where('id', $request->id)->update([
             'isi_tanggapan' => $request->isi_tanggapan,
+            'updated_at' => now(),  // Update timestamp
         ]);
     
         // Redirect ke halaman yang sesuai
         return redirect('/dashboard');
     }
+    
     
     
 }

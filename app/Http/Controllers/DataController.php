@@ -11,13 +11,9 @@ class DataController extends Controller
 	// method untuk edit data data_admin
 	public function data_admin()
 	{
-		// Retrieve the first admin's data (or adjust according to your needs)
-		$data_admin = DB::table('data_admin')->first(); // Use ->get() if you need all admins
-	
-		// Send data to the view
+		$data_admin = DB::table('data_admin')->first(); // This will be a single object
 		return view('data_admin', ['data_admin' => $data_admin]);
 	}
-	
 
 	public function update(Request $request, $id)
 	{

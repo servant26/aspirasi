@@ -22,15 +22,14 @@
 <section class="content">
     <div class="container-fluid">
         <div class="container mt-1 mb-5">
-        @foreach($data_admin as $index => $a)
-<form action="/data_admin/update/{{ $a->id }}" method="post" enctype="multipart/form-data">
+<form action="/data_admin/update/{{ $data_admin->id }}" method="post" enctype="multipart/form-data">
     {{ csrf_field() }}
     @method('PUT')
 
     <!-- Nama -->
     <div class="mb-3">
         <label for="inputNama" class="form-label">Nama</label>
-        <input type="text" class="form-control @error('nama') is-invalid @enderror" id="inputNama" name="nama" value="{{ $a->nama }}" required autofocus>
+        <input type="text" class="form-control @error('nama') is-invalid @enderror" id="inputNama" name="nama" value="{{ $data_admin->nama }}" required autofocus>
         @error('nama')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror
@@ -39,7 +38,7 @@
     <!-- Jabatan -->
     <div class="mb-3">
         <label for="inputJabatan" class="form-label">Jabatan</label>
-        <input type="text" class="form-control @error('jabatan') is-invalid @enderror" id="inputJabatan" name="jabatan" value="{{ $a->jabatan }}" required>
+        <input type="text" class="form-control @error('jabatan') is-invalid @enderror" id="inputJabatan" name="jabatan" value="{{ $data_admin->jabatan }}" required>
         @error('jabatan')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror
@@ -49,8 +48,8 @@
     <div class="mb-3">
         <label for="inputGender" class="form-label">Gender</label>
         <select class="form-select @error('gender') is-invalid @enderror" id="inputGender" name="gender" required>
-            <option value="Laki-laki" {{ $a->gender == 'Laki-laki' ? 'selected' : '' }}>Laki-laki</option>
-            <option value="Perempuan" {{ $a->gender == 'Perempuan' ? 'selected' : '' }}>Perempuan</option>
+            <option value="Laki-laki" {{ $data_admin->gender == 'Laki-laki' ? 'selected' : '' }}>Laki-laki</option>
+            <option value="Perempuan" {{ $data_admin->gender == 'Perempuan' ? 'selected' : '' }}>Perempuan</option>
         </select>
         @error('gender')
             <div class="invalid-feedback">{{ $message }}</div>
@@ -60,7 +59,7 @@
     <!-- Username -->
     <div class="mb-3">
         <label for="inputUsername" class="form-label">Username</label>
-        <input type="text" class="form-control @error('username') is-invalid @enderror" id="inputUsername" name="username" value="{{ $a->username }}" required>
+        <input type="text" class="form-control @error('username') is-invalid @enderror" id="inputUsername" name="username" value="{{ $data_admin->username }}" required>
         @error('username')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror
@@ -69,7 +68,7 @@
     <!-- Password -->
     <div class="mb-3">
         <label for="inputPassword" class="form-label">Password</label>
-        <input type="text" class="form-control @error('password') is-invalid @enderror" id="inputPassword" name="password" value="{{ $a->password }}" required>
+        <input type="text" class="form-control @error('password') is-invalid @enderror" id="inputPassword" name="password" value="{{ $data_admin->password }}" required>
         @error('password')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror
@@ -78,8 +77,8 @@
     <!-- Display Existing Image or Alternative Text -->
     <div class="mb-3">
         <label for="currentImage" class="form-label">Foto Profile Saat Ini:</label><br>
-        @if($a->image)
-            <img src="{{ asset('images/' . $a->image) }}" alt="Foto Profil" width="25%">
+        @if($data_admin->image)
+            <img src="{{ asset('images/' . $data_admin->image) }}" alt="Foto Profil" width="25%">
         @else
             <p>Tidak ada Foto Profil.</p>
         @endif
@@ -99,7 +98,6 @@
         <button type="submit" class="btn btn-primary">Ubah Profile</button>
     </div>
 </form>
-@endforeach
 
         </div>
     </div><!-- /.container-fluid -->
