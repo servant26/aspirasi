@@ -68,7 +68,6 @@ class PegawaiController extends Controller
 		$pegawai = DB::table('pegawai')->where('id',$id)->get();
 		// passing data pegawai yang didapat ke view edit.blade.php
 		return view('edit',['pegawai' => $pegawai]);
- 
 	}
  
 	public function update(Request $request)

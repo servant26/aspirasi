@@ -27,68 +27,28 @@
             Bahwa saya akan selalu taat dalam mengamalkan dan mempertahankan Pancasila sebagai dasar negara, dan bahwa saya akan menegakkan kehidupan demokrasi dan Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 serta melaksanakan segala Peraturan Perundang-undangan, dengan selurus-lurusnya yang berlaku bagi Desa, Daerah, dan Negara Kesatuan Republik Indonesia".</p>
         </li>
         <br>
-        <li><strong>Daftar Anggota</strong></li>
-            <!-- card area start -->
-            <div class="card_wrapper">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="owl-carousel slider_carousel">
+        <li><strong>Daftar Pegawai</strong></li>
+        <!-- card area start -->
+        <div class="card_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="owl-carousel slider_carousel">
+                            @foreach($pegawai as $a)
                                 <div class="card_box">
-                                    <img class="img-fluid w-100" src="{{ asset('images/slider-03.png') }}" alt="">
+                                    <img class="img-fluid w-100" src="{{ asset('images/' . $a->image) }}" alt="">
                                     <div class="card_text">
-                                        <h4>Jumadi Saputra</h4>
-                                        <p>Kepala Desa</p>
+                                        <h4>{{ $a->nama }}</h4>
+                                        <p>{{ $a->jabatan }}</p>
                                     </div>
                                 </div>
-                                <div class="card_box">
-                                    <img class="img-fluid w-100" src="{{ asset('images/slider-03.png') }}" alt="">
-                                    <div class="card_text">
-                                        <h4>Hamisah</h4>
-                                        <p>Ketua</p>
-                                    </div>
-                                </div>
-                                <div class="card_box">
-                                    <img class="img-fluid w-100" src="{{ asset('images/slider-03.png') }}" alt="">
-                                    <div class="card_text">
-                                        <h4>Eko Winarto</h4>
-                                        <p>Wakil Ketua</p>
-                                    </div>
-                                </div>
-                                <div class="card_box">
-                                    <img class="img-fluid w-100" src="{{ asset('images/slider-03.png') }}" alt="">
-                                    <div class="card_text">
-                                        <h4>Herniwati</h4>
-                                        <p>Sekretaris</p>
-                                    </div>
-                                </div>
-                                <div class="card_box">
-                                    <img class="img-fluid w-100" src="{{ asset('images/slider-03.png') }}" alt="">
-                                    <div class="card_text">
-                                        <h4>Amalia</h4>
-                                        <p>Staff ADM</p>
-                                    </div>
-                                </div>
-                                <div class="card_box">
-                                    <img class="img-fluid w-100" src="{{ asset('images/slider-03.png') }}" alt="">
-                                    <div class="card_text">
-                                        <h4>Wandiro Bayu Broto NS.</h4>
-                                        <p>Ketua Bidang Penyelenggaraan Pemerintahan</p>
-                                    </div>
-                                </div>
-                                <div class="card_box">
-                                    <img class="img-fluid w-100" src="{{ asset('images/slider-03.png') }}" alt="">
-                                    <div class="card_text">
-                                        <h4>Nor</h4>
-                                        <p>Ketua Bidang Pembangunan</p>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- card area end -->
+        </div>
+        <!-- card area end -->
         <li>
             <strong>Peraturan Daerah Kabupaten Paser Nomor 3 Tahun 2020 Tentang Badan Permusyawaratan Desa</strong>
             <ol type="disc">

@@ -89,7 +89,7 @@
         <img src="{{ asset('images/profile_admin.png') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Admin</a>
+          <a href="/data_admin" class="d-block">Admin</a>
         </div>
       </div>
 
@@ -97,15 +97,15 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="/dashboard" class="nav-link active">
+            <a href="/dashboard" class="nav-link {{ request()->is('dashboard') ? 'active' : '' }}">
               <i class="nav-icon fa fa-home"></i>
               <p>
                 Dashboard
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
+          <li class="nav-item {{ request()->is('data_admin*') || request()->is('pegawai*') ? 'menu-open' : '' }}">
+            <a href="#" class="nav-link {{ request()->is('data_admin*') || request()->is('pegawai*') ? 'active' : '' }}">
               <i class="nav-icon fa fa-edit"></i>
               <p>
                 Edit Data
@@ -114,13 +114,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
+                <a href="/data_admin" class="nav-link {{ request()->is('data_admin*') ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Edit Admin</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/pegawai" class="nav-link">
+                <a href="/pegawai" class="nav-link {{ request()->is('pegawai*') ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Daftar Pegawai</p>
                 </a>
@@ -128,7 +128,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="/" class="nav-link">
+            <a href="/login" class="nav-link">
               <i class="nav-icon fa fa-power-off"></i>
               <p>
                 Logout

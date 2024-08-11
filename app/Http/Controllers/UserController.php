@@ -15,7 +15,11 @@ class UserController extends Controller
 
     public function profile_bpd()
     {
-        return view('profile_bpd');
+        // mengambil data dari table pegawai
+		$pegawai = DB::table('pegawai')->get();
+ 
+    	// mengirim data pegawai ke view pegawai
+		return view('profile_bpd',['pegawai' => $pegawai]);
     }
 
     public function buat_aspirasi()
