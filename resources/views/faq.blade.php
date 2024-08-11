@@ -38,6 +38,7 @@
     </style>
 @endsection
 @section('content')
+<div class="isi">
 <div class="container col-lg-8 mt-5 mb-5">
         <h3 align="center" class="mb-5">Pertanyaan seputar web</h3>
         <div class="chat-container q">
@@ -105,4 +106,5 @@
             </div>
         </div>
     </div>
+</div>
 @endsection

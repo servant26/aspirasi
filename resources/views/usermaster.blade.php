@@ -112,9 +112,37 @@
             width: auto; /* Memastikan rasio aspek gambar tetap */
         }
         
-        .navbar-nav .nav-link:hover {
-            color: #e91e63; /*Ganti dengan warna yang kamu inginkan */
+        /* .navbar-nav .nav-link:hover {
+            color: #e91e63; /*Ganti dengan warna yang kamu inginkan 
             transition: color 0.3s ease;
+         */
+        .navbar-nav .nav-link {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px; /* Berikan ruang untuk garis bawah */
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px; /* Menambah ketebalan garis bawah */
+            display: block;
+            margin-top: 5px;
+            left: 0;
+            background: #e91e63;
+            transition: width 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .isi {
+            margin: 0% 5% 0% 5%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 5% 1% 5% 1%; /* Tambahkan padding agar konten tidak terlalu mepet */
+            background-color: #ffff; /* Opsional: menambahkan background putih agar lebih kontras */
         }
 
     </style>
@@ -187,6 +215,6 @@
   	 	</div>
   	 </div>
   </footer>
-
+@yield('js')
 </body>
 </html>

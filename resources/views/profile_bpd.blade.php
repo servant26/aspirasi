@@ -1,9 +1,12 @@
 @extends('usermaster')
 @section('css')
-
+<link href="{{ asset('bt/css/fontawesome.min.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('bt/css/owl.carousel.min.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('bt/css/style.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 
 @section('content')
+<div class="isi">
 <div class="container-fluid">
     <div class="container col-lg-10 mt-5 mb-5">
     <h1 class="mb-5" align="center">Tentang BPD</h1>
@@ -25,7 +28,67 @@
         </li>
         <br>
         <li><strong>Daftar Anggota</strong></li>
-        <br>
+            <!-- card area start -->
+            <div class="card_wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="owl-carousel slider_carousel">
+                                <div class="card_box">
+                                    <img class="img-fluid w-100" src="{{ asset('images/slider-03.png') }}" alt="">
+                                    <div class="card_text">
+                                        <h4>Jumadi Saputra</h4>
+                                        <p>Kepala Desa</p>
+                                    </div>
+                                </div>
+                                <div class="card_box">
+                                    <img class="img-fluid w-100" src="{{ asset('images/slider-03.png') }}" alt="">
+                                    <div class="card_text">
+                                        <h4>Hamisah</h4>
+                                        <p>Ketua</p>
+                                    </div>
+                                </div>
+                                <div class="card_box">
+                                    <img class="img-fluid w-100" src="{{ asset('images/slider-03.png') }}" alt="">
+                                    <div class="card_text">
+                                        <h4>Eko Winarto</h4>
+                                        <p>Wakil Ketua</p>
+                                    </div>
+                                </div>
+                                <div class="card_box">
+                                    <img class="img-fluid w-100" src="{{ asset('images/slider-03.png') }}" alt="">
+                                    <div class="card_text">
+                                        <h4>Herniwati</h4>
+                                        <p>Sekretaris</p>
+                                    </div>
+                                </div>
+                                <div class="card_box">
+                                    <img class="img-fluid w-100" src="{{ asset('images/slider-03.png') }}" alt="">
+                                    <div class="card_text">
+                                        <h4>Amalia</h4>
+                                        <p>Staff ADM</p>
+                                    </div>
+                                </div>
+                                <div class="card_box">
+                                    <img class="img-fluid w-100" src="{{ asset('images/slider-03.png') }}" alt="">
+                                    <div class="card_text">
+                                        <h4>Wandiro Bayu Broto NS.</h4>
+                                        <p>Ketua Bidang Penyelenggaraan Pemerintahan</p>
+                                    </div>
+                                </div>
+                                <div class="card_box">
+                                    <img class="img-fluid w-100" src="{{ asset('images/slider-03.png') }}" alt="">
+                                    <div class="card_text">
+                                        <h4>Nor</h4>
+                                        <p>Ketua Bidang Pembangunan</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- card area end -->
         <li>
             <strong>Peraturan Daerah Kabupaten Paser Nomor 3 Tahun 2020 Tentang Badan Permusyawaratan Desa</strong>
             <ol type="disc">
@@ -98,6 +161,7 @@
     </ol>
     </div>
 </div>
+</div>
 <!-- Awal Character
 <div id="char" class="container-fluid bg-dark text-white p-5">
     <div class="container vm-content col-lg-6">
@@ -108,4 +172,39 @@
         </div>
     </div>
 </div>  -->
+@endsection
+
+@section('js')
+    <!-- all js here -->
+    <script src="{{ asset('bt/js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ asset('bt/js/owl.carousel.min.js') }}"></script>
+    <script>
+        
+        function slider_carouselInit() {
+            $('.owl-carousel.slider_carousel').owlCarousel({
+                dots: false,
+                loop: true,
+                margin: 30,
+                stagePadding: 2,
+                autoplay: false,
+                nav: true,
+                navText: ["<i class='far fa-arrow-alt-circle-left'></i>","<i class='far fa-arrow-alt-circle-right'></i>"],
+                autoplayTimeout: 1500,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2,
+                    },
+                    992: {
+                        items: 5
+                    }
+                }
+            });
+        }
+        slider_carouselInit();
+
+    </script>
 @endsection
