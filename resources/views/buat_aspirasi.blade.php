@@ -3,7 +3,7 @@
 <div class="isi">
   <div class="container-fluid">
       <div class="container col-10 col-sm-10 col-md-8 mb-5">
-        <form action="/buat_aspirasi/store" method="post">
+        <form id="aspirasiForm" action="/buat_aspirasi/store" method="post">
           {{ csrf_field() }}
           <div class="mb-3">
             <label for="nama" class="form-label">Nama</label>
@@ -30,4 +30,25 @@
       </div>
   </div>
 </div>
+@endsection
+
+@section('js')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+document.getElementById('aspirasiForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Mencegah formulir dikirimkan secara default
+
+    Swal.fire({
+        title: 'Berhasil!',
+        text: 'Aspirasi Anda berhasil dikirimkan',
+        icon: 'success',
+        confirmButtonText: 'OK'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Setelah menekan OK, kirimkan formulir
+            event.target.submit();
+        }
+    });
+});
+</script>
 @endsection

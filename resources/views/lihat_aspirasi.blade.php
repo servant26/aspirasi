@@ -1,6 +1,7 @@
 @extends('usermaster')
 @section('css')
 <style>
+    /* Existing styles */
     .report-container {
         border: 1px solid #ddd;
         border-radius: 5px;
@@ -12,12 +13,19 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background-color: #f0f0f0;
         display: inline-block;
         text-align: center;
         line-height: 40px;
         font-size: 18px;
-        color: #555;
+        color: white;
+    }
+
+    .user-icon{
+        background-color: #c5a1f2;
+    }
+
+    .admin-icon{
+        background-color: orange;
     }
     .user-name, .admin-name {
         font-weight: bold;
@@ -29,6 +37,26 @@
         padding: 10px;
         margin-top: 10px;
         margin-left: 50px;
+    }
+
+    /* Custom pagination styles */
+    .pagination {
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .page-item.disabled .page-link {
+        color: #6c757d;
+    }
+    .page-item.active .page-link {
+        background-color: #007bff;
+        border-color: #007bff;
+        color: white;
+    }
+    .page-link {
+        color: #007bff;
+    }
+    .page-link:hover {
+        text-decoration: none;
     }
 </style>
 @endsection
@@ -68,5 +96,38 @@
             </div>
         </div>
     @endforeach
+
+    <!-- Custom Pagination -->
+    <div class="mt-5 mb-5">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        @if ($aspirations->onFirstPage())
+          <li class="page-item disabled">
+            <a class="page-link">Previous</a>
+          </li>
+        @else
+          <li class="page-item">
+            <a class="page-link" href="{{ $aspirations->previousPageUrl() }}">Previous</a>
+          </li>
+        @endif
+
+        @for ($i = 1; $i <= $aspirations->lastPage(); $i++)
+          <li class="page-item {{ $i == $aspirations->currentPage() ? 'active' : '' }}">
+            <a class="page-link" href="{{ $aspirations->url($i) }}">{{ $i }}</a>
+          </li>
+        @endfor
+
+        @if ($aspirations->hasMorePages())
+          <li class="page-item">
+            <a class="page-link" href="{{ $aspirations->nextPageUrl() }}">Next</a>
+          </li>
+        @else
+          <li class="page-item disabled">
+            <a class="page-link">Next</a>
+          </li>
+        @endif
+      </ul>
+    </nav>
+    </div>
 </div>
 @endsection

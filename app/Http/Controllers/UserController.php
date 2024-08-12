@@ -48,11 +48,13 @@ class UserController extends Controller
     {
         // Mengambil data dari table aspirations dimana kolom isi_tanggapan tidak null
         $aspirations = DB::table('aspirations')
-        ->whereNotNull('isi_tanggapan')
-        ->orderBy('updated_at', 'desc')
-        ->get();
+            ->whereNotNull('isi_tanggapan')
+            ->orderBy('updated_at', 'desc')
+            ->paginate(5); // Set pagination to 5 entries per page
+    
         return view('lihat_aspirasi', ['aspirations' => $aspirations]);
     }
+    
 
     public function faq()
     {

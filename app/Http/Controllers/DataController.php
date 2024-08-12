@@ -19,10 +19,10 @@ class DataController extends Controller
 	{
 		// Validate the request
 		$request->validate([
-			'nama' => 'required|string|max:255',
-			'jabatan' => 'required|string|max:255',
+			'nama' => 'required|string|max:50',
+			'jabatan' => 'required|string|max:50',
 			'gender' => 'required|string',
-			'username' => 'required|string|max:255',
+			'username' => 'required|string|max:20',
 			'password' => 'nullable|string|min:6',
 			'image' => 'nullable|image|max:2048',
 		]);
@@ -49,7 +49,7 @@ class DataController extends Controller
 		// Update data in the database
 		DB::table('data_admin')->where('id', $id)->update($dataToUpdate);
 	
-		return redirect('/data_admin')->with('success', 'Data berhasil diubah');
+		return redirect('/dashboard')->with('success', 'Data berhasil diubah');
 	}
 	
 	

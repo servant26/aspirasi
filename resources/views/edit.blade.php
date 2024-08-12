@@ -23,7 +23,7 @@
     <div class="container-fluid">
         <div class="container mt-1 mb-5">
             @foreach($pegawai as $p)
-            <form action="/pegawai/update" method="post" enctype="multipart/form-data">
+            <form id="editForm" action="/pegawai/update" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
                 <input type="hidden" name="id" value="{{ $p->id }}">
 
@@ -85,4 +85,25 @@
 </section>
 <!-- /.content -->
 </div>
+@endsection
+
+@section('js')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+document.getElementById('editForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Mencegah formulir dikirimkan secara default
+
+    Swal.fire({
+        title: 'Berhasil!',
+        text: 'Pegawai berhasil diubah',
+        icon: 'success',
+        confirmButtonText: 'OK'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Setelah menekan OK, kirimkan formulir
+            event.target.submit();
+        }
+    });
+});
+</script>
 @endsection

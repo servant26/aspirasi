@@ -16,41 +16,49 @@ class AdminController extends Controller
 
     public function index()
     {
-        // mengambil data dari table pegawai
-        $aspirations = DB::table('aspirations')->get();
-    
-        // mengirim data pegawai ke view dashboard
+        // Mengambil data dari tabel 'aspirations', diurutkan berdasarkan kolom 'created_at' dari yang terbaru
+        $aspirations = DB::table('aspirations')
+                         ->orderBy('created_at', 'desc') // Mengurutkan data berdasarkan kolom 'created_at' dari terbaru
+                         ->get();
+        // Mengirim data ke view 'dashboard'
         return view('dashboard', ['aspirations' => $aspirations]);
     }
+    
 
     public function belum()
     {
-        // Mengambil data dari table aspirations dimana kolom isi_tanggapan masih null
-        $aspirations = DB::table('aspirations')->whereNull('isi_tanggapan')->get();
-    
-        // Mengirim data aspirasi ke view belum
+        // Mengambil data dari tabel 'aspirations' dimana kolom 'isi_tanggapan' masih null, diurutkan dari yang terbaru
+        $aspirations = DB::table('aspirations')
+                         ->whereNull('isi_tanggapan')
+                         ->orderBy('created_at', 'desc') // Mengurutkan berdasarkan kolom 'created_at'
+                         ->get();
+        
+        // Mengirim data aspirasi ke view 'belum'
         return view('belum', ['aspirations' => $aspirations]);
     }
     
-
     public function sudah()
     {
-        // Mengambil data dari table aspirations dimana kolom isi_tanggapan tidak null
-        $aspirations = DB::table('aspirations')->whereNotNull('isi_tanggapan')->get();
-    
-        // Mengirim data aspirasi ke view sudah
+        // Mengambil data dari tabel 'aspirations' dimana kolom 'isi_tanggapan' tidak null, diurutkan dari yang terbaru
+        $aspirations = DB::table('aspirations')
+                         ->whereNotNull('isi_tanggapan')
+                         ->orderBy('created_at', 'desc') // Mengurutkan berdasarkan kolom 'created_at'
+                         ->get();
+        
+        // Mengirim data aspirasi ke view 'sudah'
         return view('sudah', ['aspirations' => $aspirations]);
-    }
-    
+    }    
 
     public function daftar_aspirasi()
     {
-        // mengambil data dari table pegawai
-        $aspirations = DB::table('aspirations')->get();
-    
-        // mengirim data pegawai ke view dashboard
+        // Mengambil data dari tabel 'aspirations', diurutkan berdasarkan kolom 'created_at' dari yang terbaru
+        $aspirations = DB::table('aspirations')
+                         ->orderBy('created_at', 'desc') // Mengurutkan berdasarkan kolom 'created_at'
+                         ->get();
+        
+        // Mengirim data aspirasi ke view 'daftar_aspirasi'
         return view('daftar_aspirasi', ['aspirations' => $aspirations]);
-    }
+    }    
 
     public function detail($id)
     {

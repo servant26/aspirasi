@@ -50,7 +50,7 @@
                       <td>
                       <div class="d-grid gap-2 d-md-block">
                         <a class="btn btn-warning" href="/pegawai/edit/{{ $a->id }}" role="button">Edit</a>
-                        <a class="btn btn-danger" href="/pegawai/hapus/{{ $a->id }}" role="button" onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</a>
+                        <a class="btn btn-danger delete-btn" href="/pegawai/hapus/{{ $a->id }}" role="button" data-id="{{ $a->id }}">Hapus</a>
                       </div>  
                       </td>
                     </tr> 
@@ -71,4 +71,32 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+
+  <!-- SweetAlert2 JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.delete-btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+          e.preventDefault();
+          const url = this.getAttribute('href');
+
+          Swal.fire({
+            title: 'Konfirmasi Hapus',
+            text: "Anda yakin ingin menghapus data ini?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Hapus',
+            cancelButtonText: 'Batal'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              window.location.href = url;
+            }
+          });
+        });
+      });
+    });
+  </script>
 @endsection

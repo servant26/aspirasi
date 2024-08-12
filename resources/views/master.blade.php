@@ -245,5 +245,6 @@ function getCurrentWITATime() {
     return $currentTime;
 }
 ?>
+@yield('js')
 </body>
 </html>

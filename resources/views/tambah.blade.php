@@ -22,7 +22,7 @@
 <section class="content">
     <div class="container-fluid">
         <div class="container mt-1 mb-5">
-            <form action="/pegawai/store" method="post" enctype="multipart/form-data">
+            <form id="tambahForm" action="/pegawai/store" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
 
                 <!-- Nama -->
@@ -75,4 +75,25 @@
 </section>
 <!-- /.content -->
 </div>
+@endsection
+
+@section('js')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+document.getElementById('tambahForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Mencegah formulir dikirimkan secara default
+
+    Swal.fire({
+        title: 'Berhasil!',
+        text: 'Pegawai berhasil ditambahkan',
+        icon: 'success',
+        confirmButtonText: 'OK'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Setelah menekan OK, kirimkan formulir
+            event.target.submit();
+        }
+    });
+});
+</script>
 @endsection

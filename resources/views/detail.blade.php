@@ -25,7 +25,7 @@
                 <div class="container-fluid">
                     <div class="container mb-5">
                     @foreach($aspirations as $a)
-                    <form action="/detail/update" method="post">
+                    <form id="detailForm" action="/detail/update" method="post">
                         @csrf
                         <input type="hidden" name="id" value="{{ $a->id }}">
                         
@@ -71,4 +71,25 @@
         </div>
     </section>
 </div>
+@endsection
+
+@section('js')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+document.getElementById('detailForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Mencegah formulir dikirimkan secara default
+
+    Swal.fire({
+        title: 'Berhasil!',
+        text: 'Aspirasi berhasil ditanggapi',
+        icon: 'success',
+        confirmButtonText: 'OK'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Setelah menekan OK, kirimkan formulir
+            event.target.submit();
+        }
+    });
+});
+</script>
 @endsection
