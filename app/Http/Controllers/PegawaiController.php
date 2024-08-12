@@ -32,12 +32,15 @@ class PegawaiController extends Controller
 	{
 		// Validate the request
 		$request->validate([
-			'nama' => 'required|string|max:255',
-			'jabatan' => 'required|string|max:255',
+			'nama' => 'required|string|max:30',
+			'jabatan' => 'required|string|max:30',
 			'gender' => 'required',
 			'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+		],[
+			'nama.required' => 'Mohon isi form ini',
+			'jabatan.required' => 'Mohon isi form ini',
 		]);
-	
+		
 		// Prepare the data to insert
 		$data = [
 			'nama' => $request->nama,

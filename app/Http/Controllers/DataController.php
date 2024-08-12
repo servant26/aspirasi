@@ -51,6 +51,13 @@ class DataController extends Controller
 	
 		return redirect('/dashboard')->with('success', 'Data berhasil diubah');
 	}
-	
+
+	// DataController.php
+	public function getAdminData()
+	{
+		$adminData = DB::table('data_admin')->select('nama', 'image')->first();
+		return $adminData;
+	}
+
 	
 }

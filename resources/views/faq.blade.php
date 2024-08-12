@@ -82,6 +82,19 @@
 
         <div class="chat-container q">
             <div class="chat-bubble chat-bubble-q">
+                Berapa lama aspirasi saya diproses dan ditanggapi?
+            </div>
+            <img src="{{ asset('images\user.png') }}" alt="User Profile" class="profile-pic">
+        </div>
+        <div class="chat-container a">
+            <img src="{{ asset('images\admin.png') }}" alt="Admin Profile" class="profile-pic">
+            <div class="chat-bubble chat-bubble-a">
+                Anda bisa menunggu selang 3-5 hari, jika tidak ada tanggapan, bisa langsung menghubungi kontak di bawah ini atau bisa juga mengunjungi kantor BPD Lolo
+            </div>
+        </div>
+
+        <div class="chat-container q">
+            <div class="chat-bubble chat-bubble-q">
                 Siapa yang dapat saya hubungi jika saya mengalami masalah dengan fitur ini?
             </div>
             <img src="{{ asset('images\user.png') }}" alt="User Profile" class="profile-pic">

@@ -83,15 +83,15 @@
 
     <!-- Sidebar -->
     <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-        <img src="{{ asset('images/profile_admin.png') }}" class="img-circle elevation-2" alt="User Image">
+            <img src="{{ asset('images/' . $adminData->image) }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="/data_admin" class="d-block">Admin</a>
+            <a href="/data_admin" class="d-block">{{ $adminData->nama }}</a>
         </div>
-      </div>
+    </div>
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -116,7 +116,7 @@
               <li class="nav-item">
                 <a href="/data_admin" class="nav-link {{ request()->is('data_admin*') ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Edit Admin</p>
+                  <p>Ubah Profile Admin</p>
                 </a>
               </li>
               <li class="nav-item">

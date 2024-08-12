@@ -22,7 +22,7 @@
 }
 
 .banner-content .btn.btn-warning {
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
     color: white;
     transition: transform 0.3s ease;
 }

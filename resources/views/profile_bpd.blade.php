@@ -8,7 +8,7 @@
 @section('content')
 <div class="isi">
 <div class="container-fluid">
-    <div class="container col-lg-10 mt-5 mb-5">
+    <div class="container col-lg-10 mt-1 mb-5">
     <h1 class="mb-5" align="center">Tentang BPD</h1>
     <ol type="A">
         <li>

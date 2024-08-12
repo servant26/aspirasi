@@ -197,7 +197,7 @@
             <div class="footer-col">
                 <h4><a class="nav-link active" href="#">Kontak dan Alamat</a></h4>
                 <ul>
-                    <li><a href="#">+62 12345678</a></li>
+                    <li><a href="https://wa.me/6282252944011" target="_blank">+62 822-5294-4011</a></li>
                     <li><a href="#">Lolo, Kec. Kuaro, Kabupaten Paser, Kalimantan Timur</a></li>
                 </ul>
             </div>
