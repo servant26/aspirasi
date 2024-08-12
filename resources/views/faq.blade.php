@@ -39,18 +39,18 @@
 @endsection
 @section('content')
 <div class="isi">
-<div class="container col-lg-8 mt-5 mb-5">
+<div class="container col-lg-8 mt-1 mb-5">
         <h3 align="center" class="mb-5">Pertanyaan seputar web</h3>
         <div class="chat-container q">
             <div class="chat-bubble chat-bubble-q">
-                Apa itu fitur aspirasi masyarakat?
+                Apa itu web aspirasi masyarakat?
             </div>
             <img src="{{ asset('images\user.png') }}" alt="User Profile" class="profile-pic">
         </div>
         <div class="chat-container a">
             <img src="{{ asset('images\admin.png') }}" alt="Admin Profile" class="profile-pic">
             <div class="chat-bubble chat-bubble-a">
-                Fitur ini memungkinkan warga desa untuk menyampaikan ide, kritik, saran, atau keluhan mereka secara langsung kepada administrasi desa. Aspirasi yang masuk akan dipertimbangkan dan dapat ditindaklanjuti oleh admin desa.
+                Web aspirasi masyarakat adalah sebuah website yang dibuat untuk menampung aspirasi warga desa dalam menyampaikan ide, kritik, saran, atau keluhan mereka secara langsung kepada administrasi desa. Aspirasi yang masuk akan dipertimbangkan dan dapat ditindaklanjuti oleh admin desa.
             </div>
         </div>
 
@@ -63,7 +63,7 @@
         <div class="chat-container a">
             <img src="{{ asset('images\admin.png') }}" alt="Admin Profile" class="profile-pic">
             <div class="chat-bubble chat-bubble-a">
-                Anda bisa mengisi formulir yang tersedia di halaman "Aspirasi Masyarakat". Masukkan informasi yang diperlukan seperti nama, kontak, dan detail aspirasi Anda, kemudian klik "Kirim".
+                Anda bisa mengisi formulir yang tersedia di halaman "Ajukan Aspirasi". Masukkan informasi yang diperlukan seperti nama, kontak, dan detail aspirasi Anda, kemudian klik "Kirim".
             </div>
         </div>
 

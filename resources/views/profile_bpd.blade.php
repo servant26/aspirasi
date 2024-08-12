@@ -9,7 +9,7 @@
 <div class="isi">
 <div class="container-fluid">
     <div class="container col-lg-10 mt-1 mb-5">
-    <h1 class="mb-5" align="center">Tentang BPD</h1>
+    <h3 class="mb-5" align="center">Tentang BPD</h3>
     <ol type="A">
         <li>
             <strong>Visi dan Misi</strong>

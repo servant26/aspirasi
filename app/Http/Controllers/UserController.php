@@ -44,16 +44,25 @@ class UserController extends Controller
     }
     
 
-    public function lihat_aspirasi()
+    public function lihat_aspirasi(Request $request)
     {
-        // Mengambil data dari table aspirations dimana kolom isi_tanggapan tidak null
-        $aspirations = DB::table('aspirations')
-            ->whereNotNull('isi_tanggapan')
-            ->orderBy('updated_at', 'desc')
+        // Get search query from the request
+        $search = $request->input('search');
+    
+        // Build the query with optional search filter
+        $query = DB::table('aspirations')
+            ->whereNotNull('isi_tanggapan');
+    
+        if ($search) {
+            $query->where('nama', 'like', "%{$search}%");
+        }
+    
+        $aspirations = $query->orderBy('updated_at', 'desc')
             ->paginate(5); // Set pagination to 5 entries per page
     
-        return view('lihat_aspirasi', ['aspirations' => $aspirations]);
+        return view('lihat_aspirasi', ['aspirations' => $aspirations, 'search' => $search]);
     }
+    
     
 
     public function faq()

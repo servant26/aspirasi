@@ -170,7 +170,7 @@
         </li>
         <li class="nav-item mx-3">
           <a class="nav-link {{ request()->is('buat_aspirasi') ? 'active' : '' }}" href="/buat_aspirasi">
-            Buat Aspirasi
+            Ajukan Aspirasi
           </a>
         </li>
         <li class="nav-item mx-3">

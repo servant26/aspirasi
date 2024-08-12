@@ -1,4 +1,5 @@
 @extends('usermaster')
+
 @section('css')
 <style>
     /* Existing styles */
@@ -63,8 +64,21 @@
 
 @section('content')
 <div class="container mt-5">
+<h3 class="mb-5" align="center">Daftar Aspirasi</h3>
+    <!-- Search Form -->
+    <div class="row">
+        <div class="col-lg-8 col-sm-8 mx-auto">
+            <form method="GET" action="{{ url('/lihat_aspirasi') }}" class="mb-4">
+                <div class="input-group">
+                    <input type="text" name="search" value="{{ $search }}" class="form-control" placeholder="Cari aspirasi (Masukkan nama anda)">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     @foreach ($aspirations as $aspiration)
-        <div class="report-container">
+        <div class="report-container col-lg-10 col-sm-10 mx-auto">">
             <!-- User Report -->
             <div class="d-flex align-items-center">
                 <div class="user-icon me-3">
@@ -94,6 +108,7 @@
                     {{ $aspiration->isi_tanggapan }}
                 </div>
             </div>
+        </col-lg-8>
         </div>
     @endforeach
 
