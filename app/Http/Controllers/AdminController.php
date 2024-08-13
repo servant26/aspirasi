@@ -10,7 +10,6 @@ class AdminController extends Controller
 
     public function login()
     {
-        // mengirim data pegawai ke view dashboard
         return view('login');
     }
 

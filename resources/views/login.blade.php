@@ -25,9 +25,9 @@
     <div class="card-body">
       <p class="login-box-msg">Masuk untuk memulai</p>
 
-      <form action="../../index3.html" method="post">
+      <form action="" method="post">
         <div class="input-group mb-3">
-          <input type="username" class="form-control" placeholder="Masukkan username">
+          <input type="email" class="form-control" placeholder="Masukkan email">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>

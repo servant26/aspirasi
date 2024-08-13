@@ -56,11 +56,11 @@
         @enderror
     </div>
 
-    <!-- Username -->
+    <!-- Email -->
     <div class="mb-3">
-        <label for="inputUsername" class="form-label">Username</label>
-        <input type="text" class="form-control @error('username') is-invalid @enderror" id="inputUsername" name="username" value="{{ $data_admin->username }}" required>
-        @error('username')
+        <label for="inputEmail" class="form-label">Email</label>
+        <input type="text" class="form-control @error('email') is-invalid @enderror" id="inputEmail" name="email" value="{{ $data_admin->email }}" required>
+        @error('email')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror
     </div>

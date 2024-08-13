@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
  
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
  
 class DataController extends Controller
 {	
@@ -22,7 +21,7 @@ class DataController extends Controller
 			'nama' => 'required|string|max:50',
 			'jabatan' => 'required|string|max:50',
 			'gender' => 'required|string',
-			'username' => 'required|string|max:20',
+			'email' => 'required|string|max:50',
 			'password' => 'nullable|string|min:6',
 			'image' => 'nullable|image|max:2048',
 		]);
@@ -32,7 +31,7 @@ class DataController extends Controller
 			'nama' => $request->nama,
 			'jabatan' => $request->jabatan,
 			'gender' => $request->gender,
-			'username' => $request->username,
+			'email' => $request->email,
 			'password' => $request->password,
 		];
 	
