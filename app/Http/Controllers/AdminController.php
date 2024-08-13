@@ -7,12 +7,6 @@ use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
-
-    public function login()
-    {
-        return view('login');
-    }
-
     public function index()
     {
         // Mengambil data dari tabel 'aspirations', diurutkan berdasarkan kolom 'created_at' dari yang terbaru

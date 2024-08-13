@@ -28,7 +28,7 @@
 
     <!-- Nama -->
     <div class="mb-3">
-        <label for="inputNama" class="form-label">Nama</label>
+        <label for="inputNama" class="form-label">Nama :</label>
         <input type="text" class="form-control @error('nama') is-invalid @enderror" id="inputNama" name="nama" value="{{ $data_admin->nama }}" required autofocus>
         @error('nama')
             <div class="invalid-feedback">{{ $message }}</div>
@@ -37,7 +37,7 @@
 
     <!-- Jabatan -->
     <div class="mb-3">
-        <label for="inputJabatan" class="form-label">Jabatan</label>
+        <label for="inputJabatan" class="form-label">Jabatan :</label>
         <input type="text" class="form-control @error('jabatan') is-invalid @enderror" id="inputJabatan" name="jabatan" value="{{ $data_admin->jabatan }}" required>
         @error('jabatan')
             <div class="invalid-feedback">{{ $message }}</div>
@@ -46,7 +46,7 @@
 
     <!-- Gender -->
     <div class="mb-3">
-        <label for="inputGender" class="form-label">Gender</label>
+        <label for="inputGender" class="form-label">Gender :</label>
         <select class="form-select @error('gender') is-invalid @enderror" id="inputGender" name="gender" required>
             <option value="Laki-laki" {{ $data_admin->gender == 'Laki-laki' ? 'selected' : '' }}>Laki-laki</option>
             <option value="Perempuan" {{ $data_admin->gender == 'Perempuan' ? 'selected' : '' }}>Perempuan</option>
@@ -58,7 +58,7 @@
 
     <!-- Email -->
     <div class="mb-3">
-        <label for="inputEmail" class="form-label">Email</label>
+        <label for="inputEmail" class="form-label">Email :</label>
         <input type="text" class="form-control @error('email') is-invalid @enderror" id="inputEmail" name="email" value="{{ $data_admin->email }}" required>
         @error('email')
             <div class="invalid-feedback">{{ $message }}</div>
@@ -67,8 +67,8 @@
 
     <!-- Password -->
     <div class="mb-3">
-        <label for="inputPassword" class="form-label">Password</label>
-        <input type="text" class="form-control @error('password') is-invalid @enderror" id="inputPassword" name="password" value="{{ $data_admin->password }}" required>
+        <label for="inputPassword" class="form-label">Ganti Password :</label>
+        <input type="text" class="form-control @error('password') is-invalid @enderror" id="inputPassword" name="password">
         @error('password')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror
@@ -76,7 +76,7 @@
 
     <!-- Display Existing Image or Alternative Text -->
     <div class="mb-3">
-        <label for="currentImage" class="form-label">Foto Profile Saat Ini:</label><br>
+        <label for="currentImage" class="form-label">Foto Profile Saat Ini :</label><br>
         @if($data_admin->image)
             <img src="{{ asset('images/' . $data_admin->image) }}" alt="Foto Profil" width="25%">
         @else
