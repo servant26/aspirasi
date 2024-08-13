@@ -65,15 +65,6 @@
         @enderror
     </div>
 
-    <!-- Password -->
-    <div class="mb-3">
-        <label for="inputPassword" class="form-label">Ganti Password :</label>
-        <input type="text" class="form-control @error('password') is-invalid @enderror" id="inputPassword" name="password">
-        @error('password')
-            <div class="invalid-feedback">{{ $message }}</div>
-        @enderror
-    </div>
-
     <!-- Display Existing Image or Alternative Text -->
     <div class="mb-3">
         <label for="currentImage" class="form-label">Foto Profile Saat Ini :</label><br>
@@ -95,6 +86,7 @@
 
     <div class="d-grid gap-2 d-md-block">
         <a class="btn btn-danger" href="/pegawai" role="button">Kembali</a>
+        <a class="btn btn-warning" href="/ganti_password" role="button">Ganti Password</a>
         <button type="submit" class="btn btn-primary">Ubah Profile</button>
     </div>
 </form>

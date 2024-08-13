@@ -70,7 +70,7 @@
         <div class="col-lg-8 col-sm-8 mx-auto">
             <form method="GET" action="{{ url('/lihat_aspirasi') }}" class="mb-4">
                 <div class="input-group">
-                    <input type="text" name="search" value="{{ $search }}" class="form-control" placeholder="Cari aspirasi (Masukkan nama anda)">
+                    <input type="text" name="search" value="{{ $search }}" class="form-control" placeholder="Cari aspirasi (Masukkan nama anda)" autofocus>
                     <button class="btn btn-primary" type="submit">Search</button>
                 </div>
             </form>

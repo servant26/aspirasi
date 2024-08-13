@@ -56,7 +56,7 @@
                         <!-- Isi Tanggapan Anda -->
                         <div class="mb-3">
                             <label for="inputTanggapan" class="form-label">Isi Tanggapan Anda :</label>
-                            <textarea class="form-control" id="inputTanggapan" name="isi_tanggapan" rows="3" required>{{ $a->isi_tanggapan }}</textarea>
+                            <textarea class="form-control" id="inputTanggapan" name="isi_tanggapan" rows="3" required autofocus>{{ $a->isi_tanggapan }}</textarea>
                         </div>
 
                         <div class="d-grid gap-2 d-md-block">

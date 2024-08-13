@@ -36,3 +36,6 @@ Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus']);
 // Route data_admin
 Route::get('/data_admin', [DataController::class, 'data_admin']);
 Route::put('/data_admin/update/{id}', [DataController::class, 'update']);
+Route::get('/ganti_password', [DataController::class, 'ganti_password']);
+Route::put('/ganti_password/update/{id}', [DataController::class, 'updatePassword']);
+

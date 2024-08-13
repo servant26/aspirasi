@@ -49,7 +49,7 @@ class DataController extends Controller
             'jabatan' => 'required|string|max:50',
             'gender' => 'required|string',
             'email' => 'required|string|max:50',
-            'password' => 'nullable|string|min:6',
+            //'password' => 'nullable|string|min:6',
             'image' => 'nullable|image|max:2048',
         ]);
     
@@ -59,7 +59,7 @@ class DataController extends Controller
             'jabatan' => $request->jabatan,
             'gender' => $request->gender,
             'email' => $request->email,
-            'password' => $request->password ? Hash::make($request->password) : DB::raw('password'),
+            //'password' => $request->password ? Hash::make($request->password) : DB::raw('password'),
         ];
     
         // Handle image upload
@@ -77,6 +77,40 @@ class DataController extends Controller
     
         return redirect('/dashboard')->with('success', 'Data berhasil diubah');
     }
+
+    public function ganti_password()
+    {
+        $data_admin = DB::table('data_admin')->first(); // This will be a single object
+        return view('ganti_password', ['data_admin' => $data_admin]);
+    }
+    
+    public function updatePassword(Request $request, $id)
+    {
+        // Validate the request
+        $request->validate([
+            'old_password' => 'nullable|string',
+            'new_password' => 'nullable|string|min:6|required_with:old_password',
+        ]);
+    
+        // Fetch the current password from the database
+        $currentPassword = DB::table('data_admin')->where('id', $id)->value('password');
+    
+        // Check if the old password matches the current password
+        if (!Hash::check($request->old_password, $currentPassword)) {
+            return redirect()->back()->withErrors(['old_password' => 'Password lama tidak cocok.']);
+        }
+    
+        // Prepare data for update
+        $dataToUpdate = [
+            'password' => $request->new_password ? Hash::make($request->new_password) : DB::raw('password'),
+        ];
+    
+        // Update data in the database
+        DB::table('data_admin')->where('id', $id)->update($dataToUpdate);
+    
+        return redirect('/dashboard')->with('success', 'Data berhasil diubah');
+    }
+    
 
     public function getAdminData()
     {

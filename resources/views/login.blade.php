@@ -57,10 +57,6 @@
           </button>
         </div>
       </form>
-
-      <p class="mb-1">
-        <a href="/ganti_password">Ganti Password</a>
-      </p>
     </div>
   </div>
 </div>
