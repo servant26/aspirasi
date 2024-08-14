@@ -17,14 +17,6 @@ Route::get('detail', [AdminController::class, 'detail']);
 Route::get('/dashboard/detail/{id}', [AdminController::class, 'detail']);
 Route::post('/detail/update', [AdminController::class, 'update']);
 
-// Route user
-Route::get('/', [UserController::class, 'home']);
-Route::get('/profile_bpd', [UserController::class, 'profile_bpd']);
-Route::get('/buat_aspirasi', [UserController::class, 'buat_aspirasi']);
-Route::post('/buat_aspirasi/store', [UserController::class, 'store']);
-Route::get('/lihat_aspirasi', [UserController::class, 'lihat_aspirasi']);
-Route::get('/faq', [UserController::class, 'faq']);
-
 // Route pegawai
 Route::get('/pegawai', [PegawaiController::class, 'pegawai']);
 Route::get('/pegawai/tambah', [PegawaiController::class, 'tambah']);
@@ -39,3 +31,10 @@ Route::put('/data_admin/update/{id}', [DataController::class, 'update']);
 Route::get('/ganti_password', [DataController::class, 'ganti_password']);
 Route::put('/ganti_password/update/{id}', [DataController::class, 'updatePassword']);
 
+// Route user
+Route::get('/', [UserController::class, 'home']);
+Route::get('/profile_bpd', [UserController::class, 'profile_bpd']);
+Route::get('/buat_aspirasi', [UserController::class, 'buat_aspirasi']);
+Route::post('/buat_aspirasi/store', [UserController::class, 'store']);
+Route::get('/lihat_aspirasi', [UserController::class, 'lihat_aspirasi']);
+Route::get('/faq', [UserController::class, 'faq']);

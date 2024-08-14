@@ -15,9 +15,30 @@
             <strong>Visi dan Misi</strong>
             <ol type="disc">
                 <li><strong>Visi</strong></li>
-                <p>lorem ipsum sit amet dolor....</p>
+                <p>Mewujudkan Desa Lolo yang transparan, responsif, dan harmonis melalui pengawasan yang efektif dan komunikasi terbuka antara pemerintah desa dan masyarakat.</p>
                 <li><strong>Misi</strong></li>
-                <p>lorem ipsum sit amet dolor dst....</p>
+                <ol type="a">
+                    <li>Mengawasi Kepemimpinan Desa</li>
+                    <ul style="list-style-type: disc;">
+                        <li>Melakukan pengawasan terhadap kinerja Kepala Desa dan staf desa secara rutin untuk memastikan mereka menjalankan tugas sesuai dengan peraturan yang berlaku</li>
+                        <li>Memastikan penggunaan anggaran desa dilakukan dengan transparan dan tepat sasaran</li>
+                    </ul>
+                    <li>Mendengarkan dan Menindaklanjuti Aspirasi Masyarakat</li>
+                    <ul style="list-style-type: disc;">
+                        <li>Mengadakan pertemuan rutin untuk mendengarkan aspirasi dan keluhan masyarakat Desa Lolo</li>
+                        <li>Menindaklanjuti aspirasi masyarakat dengan melakukan koordinasi yang baik antara BPD, Kepala Desa, dan pihak-pihak terkait</li>
+                    </ul>
+                    <li>Meningkatkan Kualitas Komunikasi</li>
+                    <ul style="list-style-type: disc;">
+                        <li>Membangun jalur komunikasi yang efektif antara pemerintah desa dan masyarakat untuk memastikan informasi penting tersampaikan dengan baik</li>
+                        <li>Menggunakan berbagai media komunikasi untuk memperkuat keterlibatan masyarakat dalam proses pengambilan keputusan</li>
+                    </ul>
+                    <li>Menjaga Hubungan yang Harmonis</li>
+                    <ul style="list-style-type: disc;">
+                        <li>Mengedepankan dialog dan musyawarah dalam penyelesaian masalah yang muncul di desa</li>
+                        <li>Meningkatkan kerjasama antara BPD, Kepala Desa, dan masyarakat untuk menciptakan lingkungan yang kondusif dan harmonis</li>
+                    </ul>
+                </ol>
             </ol>
         </li>
         <br>

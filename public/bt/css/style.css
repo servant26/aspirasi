@@ -77,11 +77,10 @@ button:focus, input:focus, textarea:focus {
 }
 
 .card_box {
-	background: #ffffff;
+	background: #eceaea;
 	border-radius: 40px;
 	margin-top: 40px;
 	transition: .3s;
-	margin-bottom: 40px;
 }
 
 .card_box:hover {
