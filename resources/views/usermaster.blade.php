@@ -45,7 +45,7 @@
         font-size: 18px;
         color: #ffffff;
         text-transform: capitalize;
-        margin-bottom: 35px;
+        margin-bottom: 15px;
         font-weight: 500;
         position: relative;
         display: inline-block;
@@ -103,6 +103,59 @@
         .footer-col {
             width: 50%;
             margin-bottom: 30px;
+        }
+        h3 {
+            font-size: 1.3rem; /* Sesuaikan ukuran heading */
+        }
+        .isi p, .isi ol, .isi strong {
+            font-size: 0.875rem; /* Sesuaikan ukuran teks lainnya */
+        }
+        .isi .form-label {
+            font-size: 0.875rem; /* Sesuaikan ukuran label */
+        }
+        .isi .form-control {
+            font-size: 0.875rem; /* Sesuaikan ukuran input text */
+        }
+        .isi button.btn {
+            font-size: 0.875rem; /* Sesuaikan ukuran tombol */
+        }
+        .card_text h4 {
+            font-size: 1rem; /* Sesuaikan ukuran nama pada kartu */
+        }
+        .card_text p {
+            font-size: 0.75rem; /* Sesuaikan ukuran jabatan pada kartu */
+        }
+        .report-container {
+            padding: 10px;
+            font-size: 13px;
+        }
+        .user-icon, .admin-icon {
+            width: 30px;
+            height: 30px;
+            font-size: 14px; /* Sesuaikan ukuran ikon */
+            line-height: 30px;
+        }
+        .user-name, .admin-name {
+            font-size: 15px; /* Sesuaikan ukuran teks nama */
+        }
+        .response-content {
+            margin-left: 40px;
+            padding: 8px;
+        }
+        .page-link {
+            font-size: 0.775rem; /* Sesuaikan ukuran teks pagination */
+        }
+        .chat-bubble {
+            font-size: 14px; /* Mengecilkan teks chat bubble */
+        }
+
+        .profile-pic {
+            width: 35px; /* Mengecilkan ukuran gambar profil */
+            height: 35px;
+            margin: 5px; /* Mengurangi margin di sekitar gambar profil */
+        }
+        .footer-col h4 {
+          font-size: 16px;
         }
     }
     @media(max-width: 574px) {

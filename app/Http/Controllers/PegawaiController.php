@@ -75,6 +75,7 @@ class PegawaiController extends Controller
  
 	public function update(Request $request)
 	{
+		// Validasi data
 		$request->validate([
 			'nama' => 'required|string|max:255',
 			'jabatan' => 'required|string|max:255',
@@ -82,12 +83,14 @@ class PegawaiController extends Controller
 			'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
 		]);
 	
+		// Siapkan data untuk diupdate
 		$data = [
 			'nama' => $request->nama,
 			'jabatan' => $request->jabatan,
 			'gender' => $request->gender,
 		];
 	
+		// Periksa apakah gambar baru diunggah
 		if ($request->hasFile('image')) {
 			$image = $request->file('image');
 			$imageName = time() . '.' . $image->getClientOriginalExtension();
@@ -96,10 +99,13 @@ class PegawaiController extends Controller
 			$data['image'] = $imageName;
 		}
 	
+		// Update data pegawai berdasarkan ID
 		DB::table('pegawai')->where('id', $request->id)->update($data);
 	
+		// Redirect ke halaman pegawai
 		return redirect('/pegawai');
 	}
+	
 	
  
 	// method untuk hapus data pegawai

@@ -43,41 +43,39 @@ class DataController extends Controller
 
     public function update(Request $request, $id)
     {
-        // Validate the request
+        // Validasi input
         $request->validate([
             'nama' => 'required|string|max:50',
             'jabatan' => 'required|string|max:50',
             'gender' => 'required|string',
             'email' => 'required|string|max:50',
-            //'password' => 'nullable|string|min:6',
             'image' => 'nullable|image|max:2048',
         ]);
     
-        // Prepare data for update
+        // Siapkan data untuk update
         $dataToUpdate = [
             'nama' => $request->nama,
             'jabatan' => $request->jabatan,
             'gender' => $request->gender,
             'email' => $request->email,
-            //'password' => $request->password ? Hash::make($request->password) : DB::raw('password'),
         ];
     
-        // Handle image upload
+        // Handle image upload jika ada
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = time() . '.' . $image->getClientOriginalExtension();
             $image->move(public_path('images'), $imageName);
     
-            // Update image name in dataToUpdate
+            // Update image name dalam $dataToUpdate
             $dataToUpdate['image'] = $imageName;
         }
     
-        // Update data in the database
+        // Update data di database
         DB::table('data_admin')->where('id', $id)->update($dataToUpdate);
     
         return redirect('/dashboard')->with('success', 'Data berhasil diubah');
     }
-
+    
     public function ganti_password()
     {
         $data_admin = DB::table('data_admin')->first(); // This will be a single object
