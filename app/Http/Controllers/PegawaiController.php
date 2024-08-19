@@ -61,7 +61,7 @@ class PegawaiController extends Controller
 		DB::table('pegawai')->insert($data);
 	
 		// Redirect to the pegawai page
-		return redirect('/pegawai');
+		return redirect('/pegawai_bpd');
 	}	
  
 	// method untuk edit data pegawai
@@ -103,11 +103,10 @@ class PegawaiController extends Controller
 		DB::table('pegawai')->where('id', $request->id)->update($data);
 	
 		// Redirect ke halaman pegawai
-		return redirect('/pegawai');
+		return redirect('/pegawai_bpd');
 	}
 	
 	
- 
 	// method untuk hapus data pegawai
 	public function hapus($id)
 	{
@@ -115,6 +114,6 @@ class PegawaiController extends Controller
 		DB::table('pegawai')->where('id',$id)->delete();
 		
 		// alihkan halaman ke halaman pegawai
-		return redirect('/pegawai');
+		return redirect('/pegawai_bpd');
 	}
 }

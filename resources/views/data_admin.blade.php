@@ -22,7 +22,7 @@
 <section class="content">
     <div class="container-fluid">
         <div class="container mt-1 mb-5">
-<form id="dataForm" action="/data_admin/update/{{ $data_admin->id }}" method="post" enctype="multipart/form-data">
+<form id="dataForm" action="/data_admin_bpd/update_bpd/{{ $data_admin->id }}" method="post" enctype="multipart/form-data">
     {{ csrf_field() }}
     @method('PUT')
 
@@ -85,8 +85,8 @@
     </div>
 
     <div class="d-grid gap-2 d-md-block">
-        <a class="btn btn-danger" href="/pegawai" role="button">Kembali</a>
-        <a class="btn btn-warning" href="/ganti_password" role="button">Ganti Password</a>
+        <a class="btn btn-danger" href="/pegawai_bpd" role="button">Kembali</a>
+        <a class="btn btn-warning" href="/ganti_password_bpd" role="button">Ganti Password</a>
         <button type="submit" class="btn btn-primary">Ubah Profile</button>
     </div>
 </form>

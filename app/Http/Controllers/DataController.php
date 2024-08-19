@@ -26,7 +26,7 @@ class DataController extends Controller
 
         if ($admin && Hash::check($request->password, $admin->password)) {
             // Authentication successful
-            return redirect('/dashboard');
+            return redirect('/dashboard_bpd');
         } else {
             // Authentication failed
             return redirect('login')->withErrors(['error' => 'Invalid email or password.']);
@@ -73,7 +73,7 @@ class DataController extends Controller
         // Update data di database
         DB::table('data_admin')->where('id', $id)->update($dataToUpdate);
     
-        return redirect('/dashboard')->with('success', 'Data berhasil diubah');
+        return redirect('/dashboard_bpd')->with('success', 'Data berhasil diubah');
     }
     
     public function ganti_password()
@@ -106,7 +106,7 @@ class DataController extends Controller
         // Update data in the database
         DB::table('data_admin')->where('id', $id)->update($dataToUpdate);
     
-        return redirect('/dashboard')->with('success', 'Data berhasil diubah');
+        return redirect('/dashboard_bpd')->with('success', 'Data berhasil diubah');
     }
     
 

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aspirasi Masyarakat</title>
   @yield('css')
-  <link rel="icon" href="{{ asset('images/paser.png') }}" type="image/png">
+  <link rel="icon" href="{{ asset('images/logo_bpd.png') }}" type="image/png">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <!-- Bootstrap -->
   <link href="{{ asset('bt/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -38,7 +38,7 @@
         padding: 70px 0;
     }
     .footer-col {
-        width: 25%;
+        width: 35%;
         padding: 0 15px;
     }
     .footer-col h4 {
@@ -203,7 +203,7 @@
   <div class="container-fluid m-2 d-flex align-items-center">
     <div class="dropdown">
       <a class="navbar-brand" href="#">
-        <img src="{{ asset('images/paser.png') }}" class="navbar-logo">
+        <img src="{{ asset('images/logo_bpd.png') }}" class="navbar-logo">
       </a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -214,11 +214,6 @@
         <li class="nav-item mx-3">
           <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="/">
             Home
-          </a>
-        </li>
-        <li class="nav-item mx-3">
-          <a class="nav-link {{ request()->is('profile_bpd') ? 'active' : '' }}" href="/profile_bpd">
-            Profile BPD
           </a>
         </li>
         <li class="nav-item mx-3">
@@ -250,7 +245,8 @@
             <div class="footer-col">
                 <h4><a class="nav-link active" href="#">Kontak dan Alamat</a></h4>
                 <ul>
-                    <li><a href="https://wa.me/6282252944011" target="_blank">+62 822-5294-4011</a></li>
+                    <li><a href="https://wa.me/6281351009129" target="_blank">Ketua BPD +62 813-5100-9129</a></li>
+                    <li><a href="https://wa.me/6282252944011" target="_blank">Staf ADM BPD +62 822-5294-4011</a></li>
                     <li><a href="#">Lolo, Kec. Kuaro, Kabupaten Paser, Kalimantan Timur</a></li>
                 </ul>
             </div>

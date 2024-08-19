@@ -22,7 +22,7 @@
 <section class="content">
     <div class="container-fluid">
         <div class="container mt-1 mb-5">
-            <form id="tambahForm" action="/pegawai/store" method="post" enctype="multipart/form-data">
+            <form id="tambahForm" action="/pegawai_bpd/store_bpd" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
 
                 <!-- Nama -->
@@ -66,7 +66,7 @@
                 </div>
 
                 <div class="d-grid gap-2 d-md-block">
-                    <a class="btn btn-danger" href="/pegawai" role="button">Kembali</a>
+                    <a class="btn btn-danger" href="/pegawai_bpd" role="button">Kembali</a>
                     <button type="submit" class="btn btn-primary">Tambah Data</button>
                 </div>
             </form>

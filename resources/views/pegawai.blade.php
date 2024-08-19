@@ -36,7 +36,7 @@
                     <th>Foto</th>
                     <th>Jabatan</th>
                     <th>Gender</th>
-                    <th style="width: 15%;"><a class="btn btn-primary" href="/pegawai/tambah" role="button">Tambah</a></th>
+                    <th style="width: 15%;"><a class="btn btn-primary" href="/pegawai_bpd/tambah_bpd" role="button">Tambah</a></th>
                   </tr>
                   </thead>
                   <tbody>
@@ -49,8 +49,8 @@
                       <td>{{ $a->gender }}</td>
                       <td>
                       <div class="d-grid gap-2 d-md-block">
-                        <a class="btn btn-warning" href="/pegawai/edit/{{ $a->id }}" role="button">Edit</a>
-                        <a class="btn btn-danger delete-btn" href="/pegawai/hapus/{{ $a->id }}" role="button" data-id="{{ $a->id }}">Hapus</a>
+                        <a class="btn btn-warning" href="/pegawai_bpd/edit_bpd/{{ $a->id }}" role="button">Edit</a>
+                        <a class="btn btn-danger delete-btn" href="/pegawai_bpd/hapus_bpd/{{ $a->id }}" role="button" data-id="{{ $a->id }}">Hapus</a>
                       </div>  
                       </td>
                     </tr> 

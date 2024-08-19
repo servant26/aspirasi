@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aspirasi Masyarakat | Admin</title>
-  <link rel="icon" href="{{ asset('images/paser.png') }}" type="image/png">
+  <link rel="icon" href="{{ asset('images/logo_bpd.png') }}" type="image/png">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -89,7 +89,7 @@
             <img src="{{ asset('images/' . $adminData->image) }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-            <a href="/data_admin" class="d-block">{{ $adminData->nama }}</a>
+            <a href="/data_admin_bpd" class="d-block">{{ $adminData->nama }}</a>
         </div>
     </div>
 
@@ -97,15 +97,15 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="/dashboard" class="nav-link {{ request()->is('dashboard') ? 'active' : '' }}">
+            <a href="/dashboard_bpd" class="nav-link {{ request()->is('dashboard_bpd') ? 'active' : '' }}">
               <i class="nav-icon fa fa-home"></i>
               <p>
                 Dashboard
               </p>
             </a>
           </li>
-          <li class="nav-item {{ request()->is('data_admin*') || request()->is('pegawai*') ? 'menu-open' : '' }}">
-            <a href="#" class="nav-link {{ request()->is('data_admin*') || request()->is('pegawai*') ? 'active' : '' }}">
+          <li class="nav-item {{ request()->is('data_admin_bpd*') || request()->is('pegawai_bpd*') ? 'menu-open' : '' }}">
+            <a href="#" class="nav-link {{ request()->is('data_admin_bpd*') || request()->is('pegawai_bpd*') ? 'active' : '' }}">
               <i class="nav-icon fa fa-edit"></i>
               <p>
                 Edit Data
@@ -114,15 +114,15 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/data_admin" class="nav-link {{ request()->is('data_admin*') ? 'active' : '' }}">
+                <a href="/data_admin_bpd" class="nav-link {{ request()->is('data_admin_bpd*') ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Ubah Profile Admin</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/pegawai" class="nav-link {{ request()->is('pegawai*') ? 'active' : '' }}">
+                <a href="/pegawai_bpd" class="nav-link {{ request()->is('pegawai_bpd*') ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Daftar Pegawai</p>
+                  <p>Daftar Anggota</p>
                 </a>
               </li>
             </ul>

@@ -53,7 +53,7 @@
                         <span class="badge badge-info">Sudah ditanggapi</span>
                       @endif
                       </td>
-                    <td><a class="btn btn-success" href="/dashboard/detail/{{ $a->id }}" role="button">Detail</a></td>
+                    <td><a class="btn btn-success" href="/dashboard_bpd/detail_bpd/{{ $a->id }}" role="button">Detail</a></td>
                     </tr> 
                     @endforeach
                   </tbody>

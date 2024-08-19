@@ -23,7 +23,7 @@
     <div class="container-fluid">
         <div class="container mt-1 mb-5">
             @foreach($pegawai as $p)
-            <form id="editForm" action="/pegawai/update" method="post" enctype="multipart/form-data">
+            <form id="editForm" action="/pegawai_bpd/update_bpd" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
                 <input type="hidden" name="id" value="{{ $p->id }}">
 
@@ -75,7 +75,7 @@
                 </div>
 
                 <div class="d-grid gap-2 d-md-block">
-                    <a class="btn btn-danger" href="/pegawai" role="button">Kembali</a>
+                    <a class="btn btn-danger" href="/pegawai_bpd" role="button">Kembali</a>
                     <button type="submit" class="btn btn-primary">Simpan Data</button>
                 </div>
             </form>

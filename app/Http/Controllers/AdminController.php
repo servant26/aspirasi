@@ -75,7 +75,7 @@ class AdminController extends Controller
         ]);
     
         // Redirect ke halaman yang sesuai
-        return redirect('/dashboard');
+        return redirect('/dashboard_bpd');
     }
     
     

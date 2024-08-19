@@ -25,7 +25,7 @@
                 <div class="container-fluid">
                     <div class="container mb-5">
                     @foreach($aspirations as $a)
-                    <form id="detailForm" action="/detail/update" method="post">
+                    <form id="detailForm" action="/detail_bpd/update_bpd" method="post">
                         @csrf
                         <input type="hidden" name="id" value="{{ $a->id }}">
                         
@@ -60,7 +60,7 @@
                         </div>
 
                         <div class="d-grid gap-2 d-md-block">
-                            <a class="btn btn-danger" href="/dashboard" role="button">Kembali</a>
+                            <a class="btn btn-danger" href="/dashboard_bpd" role="button">Kembali</a>
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </div>
                     </form>     

@@ -37,7 +37,7 @@
               <div class="icon">
                 <i class="fa fa-book"></i>
               </div>
-              <a href="/daftar_aspirasi" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/daftar_aspirasi_bpd" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -51,7 +51,7 @@
               <div class="icon">
                 <i class="fa fa-user-times"></i>
               </div>
-              <a href="/belum_ditanggapi" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/belum_ditanggapi_bpd" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <div class="col-lg-4 col-12">
@@ -64,7 +64,7 @@
               <div class="icon">
                 <i class="fa fa-upload"></i>
               </div>
-              <a href="/sudah_ditanggapi" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/sudah_ditanggapi_bpd" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -103,7 +103,7 @@
                         <span class="badge badge-info">Sudah ditanggapi</span>
                       @endif
                       </td>
-                      <td><a class="btn btn-success" href="/dashboard/detail/{{ $a->id }}" role="button">Detail</a></td>
+                      <td><a class="btn btn-success" href="/dashboard_bpd/detail_bpd/{{ $a->id }}" role="button">Detail</a></td>
                     </tr> 
                     @endforeach
                   </tbody>
