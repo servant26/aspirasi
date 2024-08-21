@@ -48,10 +48,8 @@
                       <td>{{ $a->jabatan }}</td>
                       <td>{{ $a->gender }}</td>
                       <td>
-                      <div class="d-grid gap-2 d-md-block">
                         <a class="btn btn-warning" href="/pegawai_bpd/edit_bpd/{{ $a->id }}" role="button">Edit</a>
                         <a class="btn btn-danger delete-btn" href="/pegawai_bpd/hapus_bpd/{{ $a->id }}" role="button" data-id="{{ $a->id }}">Hapus</a>
-                      </div>  
                       </td>
                     </tr> 
                     @endforeach
@@ -86,8 +84,8 @@
             text: "Anda yakin ingin menghapus data ini?",
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
             confirmButtonText: 'Hapus',
             cancelButtonText: 'Batal'
           }).then((result) => {

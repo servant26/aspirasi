@@ -77,6 +77,15 @@ class AdminController extends Controller
         // Redirect ke halaman yang sesuai
         return redirect('/dashboard_bpd');
     }
+
+    public function dashboard_hapus($id) {
+        // menghapus data aspirations berdasarkan id yang dipilih
+        DB::table('aspirations')->where('id', $id)->delete();
+        
+        // alihkan halaman ke halaman dashboard_bpd
+        return redirect('/dashboard_bpd');
+    }
+    
     
     
     

@@ -49,7 +49,9 @@
                       <td>
                         <span class="badge badge-info">Sudah ditanggapi</span>
                       </td>
-                      <td><a class="btn btn-success" href="/dashboard_bpd/detail_bpd/{{ $a->id }}" role="button">Detail</a></td>
+                      <td><a class="btn btn-success" href="/dashboard_bpd/detail_bpd/{{ $a->id }}" role="button">Detail</a>
+                      <a class="btn btn-danger delete-btn" href="/dashboard_bpd/hapus_bpd/{{ $a->id }}" role="button" data-id="{{ $a->id }}">Hapus</a>
+                    </td>
                     </tr> 
                     @endforeach
                   </tbody>
@@ -68,4 +70,34 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+@endsection
+
+@section('js')
+ <!-- SweetAlert2 JavaScript -->
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.delete-btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+          e.preventDefault();
+          const url = this.getAttribute('href');
+
+          Swal.fire({
+            title: 'Konfirmasi Hapus',
+            text: "Anda yakin ingin menghapus data ini?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Hapus',
+            cancelButtonText: 'Batal'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              window.location.href = url;
+            }
+          });
+        });
+      });
+    });
+  </script>
 @endsection

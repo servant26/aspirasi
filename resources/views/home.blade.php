@@ -126,7 +126,7 @@
     <div class="container vm-content col-lg-6">
         <div class="text-center">
             <p class="fs-3">
-                More Info
+                BPD Lolo "BerIMAN"
             </p>
         </div>
     </div>
@@ -134,7 +134,7 @@
 
 <div class="visi">
     <h4 align="center" class="mt-5">Visi</h4>
-    <h5 align="center" class="mb-5">“BerIMAN” Berorientasi pengawasan Inisiatif Menyerap Aspirasi Akuntabel dan Netralitas</h5>
+    <h5 align="center" class="mb-5">Berorientasi pengawasan Inisiatif Menyerap Aspirasi Akuntabel dan Netralitas</h5>
 </div>
 
 <div class="container-fluid">
@@ -147,24 +147,24 @@
                 <ul style="list-style-type: disc;">
                     <li>Bertindak secara objektif dan jujur</li>
                     <li>Melakukan pengawasan preventif dan korektif</li>
-                    <li>Menciptakan hubungan kerja harmonis dan bersinergi mewujudkan pelayanan prima</li>
+                    <li>Menciptakan hubungan kerja harmonis serta kemitraan koordinatif dan konsultatif</li>
                 </ul>
             <strong><li>Inisiatif</li></strong>
                 <ul style="list-style-type: disc;">
-                    <li>Proaktif bertindak mencari solusi</li>
-                    <li>Menemukan peluang dalam mencapai tujuan</li>
-                    <li>Berpikir kreatif memecahkan masalah</li>
+                    <li>Proaktif merancang, membahas dan menyepakati rancangan Peraturan Desa</li>
+                    <li>Menemukan peluang dalam mencapai tujuan mewujudkan Pelayanan Prima</li>
+                    <li>Berpikir kreatif memecahkan masalah serta bertindak mencari solusi</li>
                 </ul>
             <strong><li>Menyerap Aspirasi</li></strong>
                 <ul style="list-style-type: disc;">
-                    <li>Menampung, mengelola dan menyalurkan aspirasi</li>
-                    <li>Mendorong partisipasi dan mendengar langsung kebutuhan masyarakat</li>
-                    <li>Memberi jawaban, tanggapan langsung serta menyatakan pendapat </li>
+                    <li>Menggali, menampung, mengelola dan menyalurkan aspirasi</li>
+                    <li>Mendorong partisipatif dan mendengar langsung kebutuhan masyarakat</li>
+                    <li>Memberi jawaban, tanggapan langsung serta melaksanakan Rencana Tindak Lanjut (RTL) </li>
                 </ul>
             <strong><li>Akuntabel</li></strong>
                 <ul style="list-style-type: disc;">
-                    <li>Melaksanakan tupoksi dengan jujur, bertanggungjawab, disiplin dan berintegritas tinggi</li>
-                    <li>Menggunakan barang milik negara secara bertanggung jawab, efektif dan efisien</li>
+                    <li>Melaksanakan tupoksi dengan jujur, bertanggungjawab, cermat, disiplin dan berintegritas tinggi</li>
+                    <li>Menggunakan kekayaan dan barang milik negara secara bertanggung jawab, efektif dan efisien</li>
                     <li>Tidak menyalahgunakan kewenangan jabatan</li>
                 </ul>
             <strong><li>Netralitas</li></strong>

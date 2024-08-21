@@ -10,6 +10,7 @@ use App\Http\Controllers\DataController;
 Route::get('login', [DataController::class, 'login']);
 Route::post('login', [DataController::class, 'authenticate']); // Add this line
 Route::get('dashboard_bpd', [AdminController::class, 'index']);
+Route::get('/dashboard_bpd/hapus_bpd/{id}', [AdminController::class, 'dashboard_hapus']);
 Route::get('belum_ditanggapi_bpd', [AdminController::class, 'belum']);
 Route::get('sudah_ditanggapi_bpd', [AdminController::class, 'sudah']);
 Route::get('daftar_aspirasi_bpd', [AdminController::class, 'daftar_aspirasi']);
