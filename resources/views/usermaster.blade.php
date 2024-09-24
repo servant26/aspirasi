@@ -198,12 +198,12 @@
 </head>
 
 <body>
-<!--Awal Navbar-->
+<!-- Awal Navbar -->
 <nav class="navbar sticky-top navbar-expand-lg bg-dark navbar-dark">
   <div class="container-fluid m-2 d-flex align-items-center">
     <div class="dropdown">
-      <a class="navbar-brand" href="#">
-        <img src="{{ asset('images/logo_bpd.png') }}" class="navbar-logo">
+      <a class="navbar-brand" href="#" id="logo-link">
+        <img src="{{ asset('images/logo_bpd.png') }}" class="navbar-logo" alt="Logo BPD">
       </a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -261,5 +261,22 @@
      </div>
 </footer>
 @yield('js')
+<script>
+  let clickCount = 0;
+
+document.getElementById('logo-link').addEventListener('click', function(event) {
+  event.preventDefault(); // Mencegah aksi default dari tautan
+  clickCount++;
+
+  if (clickCount === 2) {
+    window.location.href = "{{ route('login') }}"; // Arahkan ke halaman login
+  }
+  
+  // Reset clickCount setelah 2 detik jika tidak di klik lagi
+  setTimeout(() => {
+    clickCount = 0;
+  }, 2000);
+});
+</script>
 </body>
 </html>
